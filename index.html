@@ -16,16 +16,17 @@
         <a-asset-item id="model" src="https://raw.githubusercontent.com/ryller18/webar/main/assets/figurinetest.glb"></a-asset-item>
       </a-assets>
 
-      <a-entity
-        id="modelEntity"
-        gltf-model="#model"
-        position="0 0 0"
-        rotation="0 0 0"
-        scale="0.1 0.1 0.1"
-        arjs-anchor="preset: model;"
-      ></a-entity>
+      <a-marker preset="hiro">
+        <a-entity
+          id="modelEntity"
+          gltf-model="#model"
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.1 0.1 0.1"
+        ></a-entity>
+      </a-marker>
 
-      <a-marker-camera preset="hiro"></a-marker-camera>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
