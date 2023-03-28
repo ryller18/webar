@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My AR App</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs="trackingMethod: best;">
+    <a-marker preset="hiro">
+      <a-entity id="model" gltf-model="figurinetest.glb" scale="0.05 0.05 0.05" position="0 0 0" rotation="0 0 0"></a-entity>
+    </a-marker>
+    <a-assets>
+      <a-asset-item id="my-3d-model" src="assets/figurinetest.glb"></a-asset-item>
+    </a-assets>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <script src="main.js"></script>
+</body>
+</html>
